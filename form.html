@@ -1,0 +1,179 @@
+<!--表單 <form> -->
+<!--提供介面，讓使用者輸入表單-->
+<!--交給後端做進一步的處理，然後接收回傳訊息給使用者-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> DJ喜好問卷調查 </title>
+    <link rel="icon" href="img/icon.png">
+    <style>
+        /* div {
+            background-color: blue;
+        } */
+
+        body {
+            font-family: 微軟正黑體;
+            background-color: black;
+            background-image: url('img/bg03.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div{
+            background-color: white;
+        }
+        td {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;width:950px;margin: 0px auto;">
+        <h1 style="background-color: red; color: white;">DJ喜好問卷調查</h1>
+        <form>
+
+            <label for="userName" style="font-weight: bold;"> <span style="color: red;">*</span> 姓名：</label>
+            <input type="text" id="userName">
+            <label for="userTel" style="font-weight: bold;">　電話：</label>
+            <input type="text" id="userTel">
+            <br>
+            <label style="font-weight: bold;">年齡： </label>
+            <input type="radio" name="age" id="age19">
+            <label for="age19">19以下</label>
+            <input type="radio" name="age" id="age2029">
+            <label for="age2029">20-29</label>
+            <input type="radio" name="age" id="age3039">
+            <label for="age3039">30-39</label>
+            <input type="radio" name="age" id="age4049">
+            <label for="age4049">40-49</label>
+            <input type="radio" name="age" id="age50">
+            <label for="age50">50以上　　</label>
+
+            <label for="fm" style="font-weight: bold;">性別：</label>
+            <select name="fm" id="fm">
+                <option value="male">男</option>
+                <option value="female" selected>女</option>
+            </select>
+            <br>
+            <label style="font-weight: bold;">喜歡的EDM類型：</label>
+            <input type="checkbox" name="edmtype" id="house">
+            <label for="house">House</label>
+            <input type="checkbox" name="edmtype" id="trance">
+            <label for="trance">Trance</label>
+            <input type="checkbox" name="edmtype" id="electro">
+            <label for="electro">Electro</label>
+            <input type="checkbox" name="edmtype" id="hardstyle">
+            <label for="hardstyle">Hardstyle</label>
+            <input type="checkbox" name="edmtype" id="dubstep">
+            <label for="dubstep">Dubstep</label>
+            <input type="checkbox" name="edmtype" id="other">
+            <label for="other">其他：<input type="text" id="edmother" value="ex...Future House
+                "></label>
+
+            <br><hr style="width: 800px;"><br>
+
+
+            <table style="margin: 0px auto;">
+                <tr>
+                    <td><img src="img/01.jpg" width="400px"></td>
+                    <td><img src="img/02.jpg" width="400px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="djs" id="dvlm">
+                        <label for="dvlm">Dimitri Vegas & Like Mike</label></td>
+                    <td>
+                        <input type="checkbox" name="djs" id="martin">
+                        <label for="martin">Martin Garrix</label></td>
+
+                </tr>
+                <tr>
+                    <td><img src="img/03.jpg" width="400px"></td>
+                    <td><img src="img/04.jpg" width="400px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="djs" id="oliver">
+                        <label for="oliver">Oliver Heldens</label></td>
+
+                    <td>
+                        <input type="checkbox" name="djs" id="marsh">
+                        <label for="marsh">MarshMello</label></td>
+
+                </tr>
+                <tr>
+                    <td><img src="img/05.jpg" width="400px"></td>
+                    <td><img src="img/06.jpg" width="400px"></td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <input type="checkbox" name="djs" id="afro">
+                        <label for="afro">Afrojack</label></td>
+                    <td>
+                        <input type="checkbox" name="djs" id="armin">
+                        <label for="armin">Armin Van Buuren</label></td>
+
+                </tr>
+                <tr>
+                    <td><img src="img/07.jpg" width="400px"></td>
+                    <td><img src="img/08.jpg" width="400px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="djs" id="david">
+                        <label for="david">David Guetta</label></td>
+
+                    <td>
+                        <input type="checkbox" name="djs" id="don">
+                        <label for="don">Don Diablo</label></td>
+
+                </tr>
+                <tr>
+                    <td><img src="img/09.jpg" width="400px"></td>
+                    <td><img src="img/10.jpg" width="400px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="djs" id="steve">
+                        <label for="steve">Steve Aoki</label></td>
+
+                    <td>
+                        <input type="checkbox" name="djs" id="tiesto">
+                        <label for="tiesto">Tiesto</label></td>
+
+                </tr>
+
+            </table>
+
+            <input type="reset" style="font-family: 微軟正黑體;">
+            <input type="submit" style="font-family: 微軟正黑體;" id="pgdown">
+            <br><br>
+            <hr>
+
+
+
+            <!-- 1-2. 加入 年紀 <input type="radio"> -->
+            <!--  id：識別某個HTML文件上的元素-->
+            <!--  class：HTML標籤的分組-->
+            <!--  name：伺服器端根據name取得值；做為radio、checkbox的分組-->
+
+            <!-- 1-3. 加入 職業 <input type="radio"> ，步驟和 1-2 類似-->
+
+            <!-- 1-4. 加入 交通工具 <input type="checkbox"> -->
+
+            <!-- 1-5. 加入 提交  <input type="submit"> -->
+            <!--   a. 比較 <form onsubmit=""> 事件 和 <input type="submit" onclick="" 事件> -->
+            <!--   b. 先確認事件有綁定成功，後面等到javascript章節，我們再回頭撰寫事件和元素取值-->
+        </form>
+    </div>
+
+
+</body>
+
+</html>
